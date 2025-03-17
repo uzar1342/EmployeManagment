@@ -4,8 +4,8 @@ const employeeSchema = new mongoose.Schema({
   name: String,
   position: String,
   salary: Number,
-  createdBy: mongoose.Schema.Types.ObjectId,
-  
+  createdBy: String,
+  createdOn: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Employee', employeeSchema);
